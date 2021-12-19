@@ -4,6 +4,7 @@ import json
 import csv 
 import numpy as np
 import pandas as pd
+import config 
 
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 parameters = {
@@ -13,7 +14,7 @@ parameters = {
 }
 headers = {
   'Accepts': 'application/json',
-  'X-CMC_PRO_API_KEY': 'ae9e398b-710d-4c5b-8e0b-9747d61707a2',
+  'X-CMC_PRO_API_KEY': config.api_key,
 }
 
 session = Session()
